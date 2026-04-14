@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cover Letter | Dustin T. Shoup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <header>
+    <h1>Dustin T. Shoup</h1>
+    <h2>Cover Letter</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="cover-letter.html">Cover Letter</a></li>
+        <li><a href="career-goals.html">Career Goals</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="reveal">
+      <article class="reveal">
+        <p><span>Hiring Manager</span></p>
+        <p>Dear Hiring Manager,</p>
+        <hr>
+        <p>I am writing to express my interest in a technical position where I can contribute my experience in infrastructure support, cloud operations, and problem solving. As a current <strong>United States Air Force IT Administrator</strong>, I have developed practical skills in server administration, cloud engineering, console management, network administration, and fiber splicing.</p>
+
+        <p>My experience has taught me how to work carefully, communicate clearly, and support systems that others rely on every day. I am especially interested in opportunities that allow me to combine technical operations with modern web and cloud solutions. <em>I enjoy learning new platforms, improving workflows, and helping teams succeed through dependable technical support.</em></p>
+
+        <p>In addition to my professional experience, I value service, accountability, and continued growth. My volunteer work with the American Red Cross reflects my commitment to supporting others, while my certification path shows an ongoing investment in cloud, networking, and cybersecurity knowledge.</p>
+
+        <p><mark>Thank you for reviewing my portfolio.</mark> I would welcome the opportunity to discuss how my background, technical strengths, and long-term goals could support your organization.</p>
+
+        <p>Sincerely,<br>Dustin T. Shoup</p>
+      </article>
+    </section>
+  
+  </main>
+
+  <a href="#top" class="top-link" id="topLink">Top</a>
+
+
+  <footer>
+    <p>&copy; 2026 Dustin T. Shoup</p>
+    <p>References: Cover letter content is original. Certification reference files are included locally in this submission.</p>
+  </footer>
+
+  <script>
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach((item) => observer.observe(item));
+
+    const topLink = document.getElementById('topLink');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 250) {
+        topLink.classList.add('show');
+      } else {
+        topLink.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>

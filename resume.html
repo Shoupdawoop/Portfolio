@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Dustin T. Shoup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <header>
+    <h1>Dustin T. Shoup</h1>
+    <h2>Resume</h2>
+    <nav>
+      <ul class="resume-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="cover-letter.html">Cover Letter</a></li>
+        <li><a href="career-goals.html">Career Goals</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="date-box">Current date appears here.</div>
+    <script>
+      const today = new Date();
+      document.getElementById("date-box").textContent = "Current date: " + today.toLocaleDateString();
+    </script>
+    <script>
+      console.log("Resume page loaded successfully for Dustin T. Shoup.");
+    </script>
+
+    <section class="reveal">
+      <h3>Professional Summary</h3>
+      <p><strong>United States Air Force IT Administrator</strong> with experience since 2021 in server administration, cloud engineering, console management, network administration, and fiber splicing. I enjoy solving technical problems, supporting secure infrastructure, and building practical web and cloud solutions.<br>
+      My background combines hands-on operations, technical troubleshooting, and a commitment to professional growth.</p>
+      <hr>
+      <p><span class="highlight">Current focus:</span> cloud platforms, systems administration, cybersecurity, and front-end web development.</p>
+    </section>
+
+    <article class="reveal">
+      <h3>Core Skills</h3>
+      <ul class="resume-list">
+        <li>Server administration and systems support</li>
+        <li>Cloud engineering and console management</li>
+        <li>Network administration and fiber splicing</li>
+        <li>Technical troubleshooting and documentation</li>
+        <li>Customer support and team collaboration</li>
+      </ul>
+      <p><em>These skills reflect both technical proficiency and dependable communication in mission-focused environments.</em></p>
+    </article>
+
+    <section class="reveal">
+      <h3>Professional Experience</h3>
+      <p><strong>IT Administrator, United States Air Force</strong><br>2021–Present</p>
+      <ul>
+        <li>Administer and support servers and core IT services.</li>
+        <li>Assist with cloud engineering tasks and platform console management.</li>
+        <li>Support network operations and infrastructure reliability.</li>
+        <li>Perform fiber splicing and contribute to communication readiness.</li>
+      </ul>
+    </section>
+
+    <section class="reveal">
+      <h4 class="volunteer-heading">Volunteer Service and Biography</h4>
+      <p><strong>American Red Cross Volunteer</strong></p>
+      <p>My volunteer service reflects a commitment to community support, education, teamwork, and dependable service. The photos below are stored locally and included as part of my professional biography.</p>
+      <div class="bio-grid">
+        <figure>
+          <img src="media/red-cross-bio-1.jpg" alt="Dustin Shoup volunteering at an American Red Cross event with children">
+          <figcaption>Volunteer service photo from an American Red Cross community event.</figcaption>
+        </figure>
+        <figure>
+          <img src="media/red-cross-bio-2.jpg" alt="Dustin Shoup and another volunteer presenting American Red Cross educational materials">
+          <figcaption>Volunteer service photo highlighting public education and outreach.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h5>Selected Certifications</h5>
+      <table class="resume-table">
+        <caption>Certification Highlights</caption>
+        <thead>
+          <tr>
+            <th>Certification</th>
+            <th>Provider</th>
+            <th>Year Earned</th>
+            <th>Status / Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CompTIA A+</td>
+            <td>CompTIA</td>
+            <td>2023</td>
+            <td>Valid through 2027</td>
+          </tr>
+          <tr>
+            <td>CompTIA Network+</td>
+            <td>CompTIA</td>
+            <td>2023</td>
+            <td>Valid through 2027</td>
+          </tr>
+          <tr>
+            <td>CompTIA Security+</td>
+            <td>CompTIA</td>
+            <td>2021</td>
+            <td>Valid through 2027</td>
+          </tr>
+          <tr>
+            <td>AWS Certified Cloud Practitioner</td>
+            <td>AWS</td>
+            <td>2024</td>
+            <td>Passed with score report included</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="reveal">
+      <h3>Education and Development</h3>
+      <p>I am continuing to expand my knowledge in information technology and web development through formal study and hands-on practice. For additional academic information, visit <a href="https://www.wgu.edu/" target="_blank" rel="noopener noreferrer">Western Governors University</a>.</p>
+    </section>
+  
+  </main>
+
+  <a href="#top" class="top-link" id="topLink">Top</a>
+
+
+  <footer>
+    <p>&copy; 2026 Dustin T. Shoup</p>
+    <p>In-text citations: Certification dates and credential details summarized from local certificate documents included in the references folder [1]–[12].</p>
+    <p>References: See the local PDF files in the references folder and the certificate gallery on the career goals page.</p>
+  </footer>
+
+  <script>
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach((item) => observer.observe(item));
+
+    const topLink = document.getElementById('topLink');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 250) {
+        topLink.classList.add('show');
+      } else {
+        topLink.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dustin T. Shoup | Portfolio Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <header>
+    <h1>Dustin T. Shoup</h1>
+    <h2>Portfolio Home</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="cover-letter.html">Cover Letter</a></li>
+        <li><a href="career-goals.html">Career Goals</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero reveal" aria-label="Portfolio introduction">
+      <div>
+        <h3>Cloud, Infrastructure, and Web Portfolio</h3>
+        <p>I am a United States Air Force IT Administrator with experience in server administration, cloud engineering, console management, network administration, and fiber splicing. This portfolio highlights my professional background, career goals, volunteer service, and certification growth.</p>
+        <div class="hero-links">
+          <a class="button-link" href="resume.html">View Resume</a>
+          <a class="button-link secondary" href="career-goals.html">View Career Goals</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img class="profile-photo" src="media/red-cross-bio-2.jpg" alt="Dustin Shoup volunteering at an American Red Cross event">
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h3>Highlights</h3>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <h4>2021–Present</h4>
+          <p>USAF IT Administration experience</p>
+        </div>
+        <div class="stat-card">
+          <h4>12</h4>
+          <p>Included certificate documents and gallery items</p>
+        </div>
+        <div class="stat-card">
+          <h4>Red Cross</h4>
+          <p>Volunteer service and public education support</p>
+        </div>
+        <div class="stat-card">
+          <h4>Web + Cloud</h4>
+          <p>Strong focus on development and infrastructure</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h3>Explore the Portfolio</h3>
+      <p>This site uses HTML, CSS, and JavaScript only. It includes a résumé page, a cover letter page, a career goals page, local media files, a contact form, and a locally hosted certificate gallery.</p>
+      <ul class="link-list">
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="cover-letter.html">Cover Letter</a></li>
+        <li><a href="career-goals.html">Career Goals</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <a href="#top" class="top-link" id="topLink">Top</a>
+
+  <script>
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    const topLink = document.getElementById('topLink');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 250) {
+        topLink.classList.add('show');
+      } else {
+        topLink.classList.remove('show');
+      }
+    });
+
+    console.log('Home page loaded with modern styling and subtle interaction.');
+  </script>
+
+  <footer>
+    <p>&copy; 2026 Dustin T. Shoup</p>
+    <p>This landing page is an optional enhancement added to improve presentation and navigation.</p>
+  </footer>
+</body>
+</html>
